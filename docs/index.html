@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bcalcballistics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Heading and subtitle */
+        h1 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        h1 + p {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        /* Section headings and content spacing */
+        h2 {
+            margin-top: 35px;
+            margin-bottom: 0px;
+        }
+
+        h2 + p,
+        h2 + ul {
+            margin-top: 2px;
+            margin-bottom: 0px;
+        }
+
+        /* Code blocks */
+        pre {
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+
+        p + pre {
+            margin-top: 0px;
+        }
+
+        /* Lists */
+        ul {
+            margin-top: 0;
+            margin-bottom: 2px;
+        }
+
+        li {
+            margin-bottom: 0px;
+        }
+
+        .header-image {
+            float: right;
+            max-width: 150px;
+            margin: 0 0 20px 20px;
+            border-radius: 8px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .button:hover {
+            background-color: #1a5276;
+        }
+
+        .small-text {
+            font-size: 0.85em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="bcalcexticon.png" alt="bcalcballistics Icon" class="header-image">
+
+        <h1>Bcalc External Ballistics Calculator</h1>
+        <p>open source external ballistics calculator</p>
+
+        <h2>Audience</h2>
+        <ul>
+            <li>Hunters and hobbyists? Yep <span class="small-text">[practical ballistics data for typical field sencarios]</span></li>
+            <li>Long-range precision shooters? Nope <span class="small-text">[check out Hornady's excellent 4DOF calculator]</span></li>
+        </ul>
+
+        <h2>Features</h2>
+        <ul>
+            <li>enter specific ammo & environmental factors for up to 3 rounds</li>
+            <li>calculator returns output tables for trajectory metrics such as drop, wind, and velocity</li>
+            <li>and draws 3 graphs comparing drop, velocity, and kinetic energy</li>
+            <li>plus creates text files containing all calculated metrics for integer ranges 1 to 800 yards</li>
+        </ul>
+
+        <h2>Installation</h2>
+        <p>(1) via pip: <code>pip install bcalcballistics</code></p>
+        <p>(2) download from github</p>
+
+        <h2>More Information</h2>
+        <a href="https://github.com/briancalc/bcalcballistics#readme" class="button">Readme</a>
+        <a href="https://github.com/briancalc/bcalcballistics" class="button">View on GitHub</a>
+    </div>
+</body>
+</html>
