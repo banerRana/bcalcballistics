@@ -1,46 +1,38 @@
 # -*- mode: python ; coding: utf-8 -*-
+# bcalcballistics.spec
+
 a = Analysis(
     ['startprogram.py'],
     pathex=[],
-    binaries=[],
+    binaries=[
+        ('/usr/lib64/libpython3.11.so.1.0', '_internal'),
+    ],
     datas=[
-        ('dataentry.py', '.'),
-        ('example.py', '.'),
-        ('dataformulas.py', '.'),
-        ('dataoutputgui.py', '.'),
         ('datacartcal.csv', '.'),
         ('datagameclass.csv', '.'),
         ('bcalcexticon.png', '.'),
         ('quail-silhouette.png', '.'),
-        ('angles.py', '.'),
-        ('atmosphere.py', '.'),
-        ('ballistics.py', '.'),
-        ('bdc.py', '.'),
-        ('constants.py', '.'),
-        ('dataholder.py', '.'),
-        ('dataholder2.py', '.'),
-        ('drag.py', '.'),
-        ('holdover.py', '.'),
-        ('points.py', '.'),
-        ('utils.py', '.'),
-        ('windage.py', '.'),
-        ('screenshots', 'screenshots'),
     ],
-    hiddenimports=['ttkbootstrap', 'matplotlib.backends.backend_tkagg'],
+    hiddenimports=[
+        'ttkbootstrap',
+        'matplotlib.backends.backend_tkagg',
+        'pandas',
+        'numpy',
+        'tkinter.ttk'
+    ],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
     excludedimports=[],
     noarchive=False,
+    optimize=0,
 )
-pyz = PYZ(a.pure, a.zipped_data, cipher=None)
+
+pyz = PYZ(a.pure)
 
 exe = EXE(
     pyz,
     a.scripts,
-    a.binaries,
-    a.zipfiles,
-    a.datas,
     [],
     name='bcalcballistics',
     debug=False,
@@ -49,9 +41,24 @@ exe = EXE(
     upx=True,
     upx_exclude=[],
     runtime_tmpdir=None,
-    console=True,
+    console=False,
     disable_windowed_traceback=False,
+    argv_emulation=False,
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    onefile=False,
+    icon='bcalcexticon.png',
 )
+
+coll = COLLECT(
+    exe,
+    a.binaries,
+    a.zipfiles,
+    a.datas,
+    strip=False,
+    upx=True,
+    upx_exclude=[],
+    name='app'
+)
+

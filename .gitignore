@@ -1,6 +1,13 @@
 # JSON data files
 *.json
 
+build/
+dist/
+venvballistics/
+tests/
+*.egg-info/
+
+
 # Debug and log files
 debug_output.txt
 *.log
@@ -14,4 +21,3 @@ __pycache__/
 *.pyd
 .Python
 
-*.egg-info/

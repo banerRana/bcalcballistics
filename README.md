@@ -47,28 +47,22 @@ Long-range precision shooters. While the calculator returns good estimates for h
 - python3 -m venv bcalcext
 - source bcalcext/bin/activate
 
-### 3. Install Python Packages
+## 4. Installation Guide
 
-- pip install -r requirements.txt
+### 1. Linux
 
-### 4. Download the Files
+- download "bcalcballistics" from the https://github.com/briancalc/bcalcballistics/releases page
+- to run using file manager, double click bcalcballistics
+- to run from the terminal ./bcalcballistics
 
-- download the calculator files and place them in ~/projects/bcalc (all .py, .csv, .png, .desktop files)
+### 2. Windows
 
-### 5. Run the Calculator
+- download "bcalcballistics.exe" from the https://github.com/briancalc/bcalcballistics/releases page
+- double click on the file to run
 
-- from the activated bcalcext environment: python3 startprogram.py
+### 3. Mac
 
-### Optional: Launch Icon
-
-1. Copy to applications folder:
-   - cp bcalcext.desktop ~/.local/share/applications/
-
-2. Copy icon:
-   - mkdir -p ~/.local/share/icons
-   - cp bcalcexticon.png ~/.local/share/icons/
-
-3. Refresh desktop menu: search "Bcalc Ext Ballistics" in your app menu (should see the quail image)
+- in progress
 
 ## 5. User Guide
 
